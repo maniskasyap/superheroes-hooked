@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/superheroes-hooked/static/css/main.717d7d4e.chunk.css",
+    "main.js": "/superheroes-hooked/static/js/main.5a0d292d.chunk.js",
+    "main.js.map": "/superheroes-hooked/static/js/main.5a0d292d.chunk.js.map",
+    "runtime-main.js": "/superheroes-hooked/static/js/runtime-main.1a71840c.js",
+    "runtime-main.js.map": "/superheroes-hooked/static/js/runtime-main.1a71840c.js.map",
+    "static/js/2.175a135e.chunk.js": "/superheroes-hooked/static/js/2.175a135e.chunk.js",
+    "static/js/2.175a135e.chunk.js.map": "/superheroes-hooked/static/js/2.175a135e.chunk.js.map",
+    "index.html": "/superheroes-hooked/index.html",
+    "precache-manifest.ca8eb2c959a6c35d2065b7b0b750a102.js": "/superheroes-hooked/precache-manifest.ca8eb2c959a6c35d2065b7b0b750a102.js",
+    "service-worker.js": "/superheroes-hooked/service-worker.js",
+    "static/css/main.717d7d4e.chunk.css.map": "/superheroes-hooked/static/css/main.717d7d4e.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1a71840c.js",
+    "static/js/2.175a135e.chunk.js",
+    "static/css/main.717d7d4e.chunk.css",
+    "static/js/main.5a0d292d.chunk.js"
+  ]
+}
