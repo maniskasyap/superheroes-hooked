@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.fight-arena {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+}
+.fight-arena .fighter {
+  flex-basis: 45%;
+}
+
+#root,
+.h-100 {
+  height: 100%;
+}
+
+.fighter-details {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.winner::before {
+  content: 'winner';
+  background-color: rgb(108, 138, 108);
+  opacity: 0.5;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.loser::before {
+  content: 'loser';
+  background-color: rgb(240, 145, 145);
+  opacity: 0.5;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.v-center {
+  align-items: center;
+}
+
+.h-space-between {
+  justify-content: space-between;
+}
+
+.header {
+  padding: 25px 20px;
+  background: #e5e8ea;
+  margin-bottom: 10px;
+}
+
+.fight-btn {
+  background-color: grey;
+  border: 0;
+  margin-bottom: 65px;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
