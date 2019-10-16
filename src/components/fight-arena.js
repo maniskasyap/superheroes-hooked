@@ -8,15 +8,29 @@ class FightArena extends Component {
       fighter1: null,
       fighter2: null,
       winner: 0,
+      isLoading: false,
     };
     this.fight = this.fight.bind(this);
   }
 
+  fetchFighters() {
+    try {
+      this.fetchFighter(this.props.id1, 1);
+      this.fetchFighter(this.props.id2, 2);
+    } finally {
+      this.setState({ isLoading: false });
+    }
+  }
+
   componentDidMount() {
-    const id1 = Math.ceil(Math.random() * 731);
-    const id2 = Math.ceil(Math.random() * 731);
-    this.fetchFighter(id1, 1);
-    this.fetchFighter(id2, 2);
+    this.fetchFighters();
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.id1 !== this.props.id1 || prevProps.id2 !== this.props.id2) {
+      this.setState({ isLoading: true, winner: 0 });
+      this.fetchFighters();
+    }
   }
 
   fetchFighter = async (id, index) => {
@@ -40,7 +54,7 @@ class FightArena extends Component {
         }
       }
     } catch (error) {
-      debugger;
+      throw new Error('error in fetching fighters');
     }
   };
 
@@ -51,7 +65,8 @@ class FightArena extends Component {
     const score1 = this.calcScore(stats1);
     const score2 = this.calcScore(stats2);
 
-    const winner = score1 > score2 ? 1 : 2;
+    const winner =
+      score1 > score2 ? this.state.fighter1.id : this.state.fighter2.id;
 
     this.setState({ winner });
   }
@@ -64,11 +79,10 @@ class FightArena extends Component {
   render() {
     return (
       <div className="fight-arena h-100">
-        {this.state.fighter1 && this.state.fighter2 && (
+        {this.state.fighter1 && this.state.fighter2 && !this.state.isLoading && (
           <>
             <div className="fighter h-100">
               <Superhero
-                fighter={1}
                 details={this.state.fighter1}
                 winner={this.state.winner}
               />
@@ -78,7 +92,6 @@ class FightArena extends Component {
             </button>
             <div className="fighter h-100">
               <Superhero
-                fighter={2}
                 details={this.state.fighter2}
                 winner={this.state.winner}
               />

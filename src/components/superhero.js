@@ -4,7 +4,7 @@ class Superhero extends Component {
   state = {};
   render() {
     let showStats = false;
-    const { fighter, details, winner } = this.props;
+    const { details, winner } = this.props;
     const {
       combat,
       durability,
@@ -15,7 +15,7 @@ class Superhero extends Component {
     } = details.powerstats;
     let styles = 'fighter-details h-100';
     if (winner !== 0) {
-      styles += winner === fighter ? ' winner' : ' loser';
+      styles += winner === details.id ? ' winner' : ' loser';
       showStats = true;
     }
     return (
