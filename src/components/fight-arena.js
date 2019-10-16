@@ -87,7 +87,7 @@ class FightArena extends Component {
                 winner={this.state.winner}
               />
             </div>
-            <button className="fight-btn" onClick={this.fight}>
+            <button className="fight-btn btn" onClick={this.fight}>
               FIGHT
             </button>
             <div className="fighter h-100">

@@ -25,7 +25,7 @@ class App extends Component {
       <div className="App h-100">
         <div className="header">
           <span>Super Combat</span>
-          <button onClick={this.getNewFighters}>New Fight</button>
+          <button className="btn new-fight" onClick={this.getNewFighters}>New Fight</button>
         </div>
         <FightArena id1={this.state.id1} id2={this.state.id2} />
       </div>

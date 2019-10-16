@@ -89,14 +89,28 @@ code {
   font-size: 1.5em;
   color: hsla(0, 0%, 100%, 0.7);
   background-color: #24292e;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  color: #fff;
+  background-color: #28a745;
+  background-image: linear-gradient(-180deg, #34d058, #28a745 90%);
+  border: 0;
+  cursor: pointer;
+  font-size: 0.6em;
+  font-weight: bold;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.new-fight {
+  min-width: 200px;
 }
 
 .fight-btn {
-  background-color: grey;
-  border: 0;
   margin-bottom: 65px;
-  outline: none;
-  cursor: pointer;
-  color: white;
-  font-weight: bold;
 }
