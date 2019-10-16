@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/superheroes-hooked/precache-manifest.cf12ccb3b3967e789c9cd488faa092e9.js"
+  "/superheroes-hooked/precache-manifest.136808a06694621837d5ac547a82dd62.js"
 );
 
 self.addEventListener('message', (event) => {
